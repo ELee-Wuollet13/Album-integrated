@@ -1,9 +1,11 @@
 <h1>Add a new album</h1>
 
 <form action="/albums" method="post">
+  <!-- sinatra looks at the form action and method and routes the to the cooresponding block in app.rb -->
   <div class="form-group">
     <label for="album_name">Album name</label>
     <input id="n" name="album_name" class="form-control" type="text">
+    <!-- sinatra grabs values based on the name attribute only -->
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>
