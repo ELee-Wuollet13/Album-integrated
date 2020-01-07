@@ -3,7 +3,7 @@ require 'song'
 require 'album'
 require 'pry'
 
-describe '#Song' do
+describe('#Song') do
 
   before(:each) do
     Album.clear()
@@ -90,7 +90,7 @@ describe '#Song' do
       expect(Song.find_by_album(album2.id)).to(eq([song2]))
     end
   end
-  
+
   describe('#songs') do
     it("returns an album's songs") do
       album = Album.new("Giant Steps", nil)
@@ -111,3 +111,5 @@ describe '#Song' do
     end
 
   end
+  
+end
