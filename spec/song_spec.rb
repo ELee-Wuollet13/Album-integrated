@@ -32,34 +32,34 @@ describe('#Song') do
     end
   end
 
-  # describe('.clear') do
-  #   it("clears all songs") do
-  #     song = Song.new({:name => "Giant Steps", :album_id => nil, :id => nil})
-  #     song.save()
-  #     song2 = Song.new({:name => "Naima", :album_id => nil, :id => nil})
-  #     song2.save()
-  #     Song.clear()
-  #     expect(Song.all).to(eq([]))
-  #   end
-  # end
-  #
-  # describe('#save') do
-  #   it("saves a song") do
-  #     song = Song.new({:name => "Naima", :album_id => nil, :id => nil})
-  #     song.save()
-  #     expect(Song.all).to(eq([song]))
-  #   end
-  # end
-  #
-  # describe('.find') do
-  #   it("finds a song by id") do
-  #     song = Song.new({:name => "Giant Steps", :album_id => nil, :id => nil})
-  #     song.save()
-  #     song2 = Song.new({:name => "Naima", :album_id => nil, :id => nil})
-  #     song2.save()
-  #     expect(Song.find(song.id)).to(eq(song))
-  #   end
-  # end
+  describe('.clear') do
+    it("clears all songs") do
+      song = Song.new({:name => "Giant Steps", :album_id => 1, :id => nil})
+      song.save()
+      song2 = Song.new({:name => "Naima", :album_id => 1, :id => nil})
+      song2.save()
+      Song.clear()
+      expect(Song.all).to(eq([]))
+    end
+  end
+
+  describe('#save') do
+    it("saves a song") do
+      song = Song.new({:name => "Naima", :album_id => 1, :id => nil})
+      song.save()
+      expect(Song.all).to(eq([song]))
+    end
+  end
+
+  describe('.find') do
+    it("finds a song by id") do
+      song = Song.new({:name => "Giant Steps", :album_id => 1, :id => nil})
+      song.save()
+      song2 = Song.new({:name => "Naima", :album_id => 1, :id => nil})
+      song2.save()
+      expect(Song.find(song.id)).to(eq(song))
+    end
+  end
 
   # describe('#update') do
   #   it("updates an song by id") do
