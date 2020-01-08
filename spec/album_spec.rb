@@ -2,6 +2,7 @@ require 'rspec'
 require 'album'
 require('spec_helper')
 require'pry'
+require 'artists'
 
 describe '#Album' do
 

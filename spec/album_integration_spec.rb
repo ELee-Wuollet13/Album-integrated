@@ -1,5 +1,6 @@
 require('capybara/rspec')
 require('./app')
+require 'artists'
 require('spec_helper')
 
 Capybara.app = Sinatra::Application

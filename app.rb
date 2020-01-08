@@ -4,6 +4,7 @@ require('./lib/album')
 require('./lib/song')
 require('pry')
 require('pg')
+require 'artists'
 also_reload('lib/**/*.rb')
 
 
