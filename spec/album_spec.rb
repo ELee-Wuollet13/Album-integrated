@@ -14,9 +14,9 @@ describe '#Album' do
 
   describe('#save') do
     it("saves an album") do
-      album = Album.new({:name => "Giant Steps", :id => nil}) # nil added as second argument
+      album = Album.new({:name => "Giant Steps", :id => nil})
       album.save()
-      album2 = Album.new({:name => "Blue", :id => nil}) # nil added as second argument
+      album2 = Album.new({:name => "Blue", :id => nil}) 
       album2.save()
       expect(Album.all).to(eq([album, album2]))
     end

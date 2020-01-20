@@ -1,8 +1,6 @@
 class Album
-  attr_accessor :name, :id
+  attr_accessor :name 
 
-  # @@albums = {}
-  # @@total_rows = 0
 
   def initialize(attributes)
     @name = attributes.fetch(:name)
@@ -27,7 +25,6 @@ class Album
 
   def ==(album_to_compare)
     self.name() == album_to_compare.name()
-    # this is just to demonstrate a point.  One would not want to do this regularly unless they had a very good reason to do so
   end
 
   def self.clear

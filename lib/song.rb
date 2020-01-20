@@ -44,7 +44,6 @@ class Song
       nil
     end
   end
-
   def update(name, album_id)
     @name = name
     @album_id = album_id

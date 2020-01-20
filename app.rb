@@ -4,13 +4,11 @@ require('./lib/album')
 require('./lib/song')
 require('pry')
 require('pg')
-require 'artists'
+# require 'artists'
 also_reload('lib/**/*.rb')
 
 
 DB = PG.connect({:dbname => "record_store"})
-
-# album routes
 
 get('/') do
   @albums = Album.all
@@ -41,8 +39,8 @@ end
 
 get('/albums/:id') do
   @album = Album.find(params[:id].to_i())
-  @album.update(params[:name]) #taken
-  @albums = Album.all #taken
+  @album.update(params[:name])
+  @albums = Album.all
   erb(:album)
 end
 
